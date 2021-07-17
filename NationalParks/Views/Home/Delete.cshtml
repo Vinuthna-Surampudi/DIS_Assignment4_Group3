@@ -1,0 +1,30 @@
+﻿@model NationalParks.Models.Class1
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <p class="text-danger">@ViewData["ErrorMessage"]</p>
+        </div>
+
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-content">
+                    <div class="row">
+                        <div class="col-sm-3"><b>Incident ID</b></div>
+                        <div class="col-sm-9">@Html.DisplayFor(model => model.id)</div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <form method="post" asp-controller="Home" asp-action="Delete">
+            <input type="hidden" asp-for="id" />
+            <div class="col text-center">
+                <button class="btn btn-danger" type="submit" name="action"><b>Click me to delete</b></button>
+
+            </div>
+        </form>
+
+    </div>
+</div>

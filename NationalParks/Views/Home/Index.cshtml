@@ -1,29 +1,94 @@
-﻿@{
-    ViewData["Title"] = "Index";
-}
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Traffic Collision </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+    img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+           </style>
+</head>
+<body>
 
-<h2>National Parks</h2>
-<hr />
+    
+    <!--- Image Slider -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="~/images/drive_safely.jpg" , alt="" style="width:100%;">
+            <div class="carousel-caption">
+                <h1 class="display-2">Traffic Collisions </h1>
+                <h3>This Website reflects traffic collision infographics in the City of Los Angeles </h3>
+                <h3> Please click <a asp-area="" asp-controller="Home" asp-action="Parks">here</a> to view the Incident details</h3>
+            </div>
+        </div>
+    </div>
 
-<div>
-    <p>
-        This application let's you fetch data from National Park Service via their public <a href="https://www.nps.gov/subjects/developer/api-documentation.htm#/" target="_blank">API</a>.
-        <br />
-        <br />
-        In order to use this application, all you need to do is get the API key from this <a href="https://api.data.gov/signup/" target="_blank">page</a>. Signup using your usf mail, the api key will be sent to you through email. Copy the key and paste it on line no 15 in APIHandlerManager/APIHandler.cs and re run the application.
-        <br />
-        <br />
-        The <a asp-area="" asp-controller="Home" asp-action="Parks">Parks</a> tab fetches parks data from the
-        <a href="https://developer.nps.gov/">National Park Service API </a> and displays the results.
-        <br />
-        <br />
-    </p>
+    <!--- Jumbotron -->
+    <div class="container-fluid">
+        <div class="row jumbotron">
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-12">
+                <p class="lead text-center">
+                    <h2>Few facts about Traffic Collisions</h2>
+                    <ul>
+                        
+                        <li>
+                            Approximately 1.3 million people die each year as a result of road traffic crashe.
+                            Half of those injured or killed in crashes are vulnerable road users such as pedestrians, cyclists and motorcyclists.
+                        </li>
+                        <li>
+                            Road traffic injuries cause considerable economic losses to individuals, their families, and to nations as a whole.
+                            These losses arise from the cost of treatment as well as lost productivity for those killed or disabled by their injuries,
+                            and for family members who need to take time off work or school to care for the injured.
+                            Road traffic crashes cost most countries 3% of their gross domestic product.
+                        </li>
+                        <li>
+                            An increase in average speed is directly related both to the likelihood of a crash occurring and to the severity of the consequences of the crash. For example, every 1% increase in mean speed produces
+                            a 4% increase in the fatal crash risk and a 3% increase in the serious crash risk.
+                        </li>
+                        <li>
+                            In the case of drug-driving, the risk of incurring a road traffic crash is increased to differing degrees depending on the psychoactive drug used. For example, the risk of a fatal crash occurring among
+                            those who have used amphetamines is about 5 times the risk of someone who hasn't.
+                        </li>
+                        <li>
+                            Using a mobile phone while driving increases your chance of crashing by 400%. Cell phone use is an increasingly significant problem on the roads and as the U.S. National Safety Council compiled more than 30 studies postulating that hands-free is not a safer option, because the
+                            brain remains distracted by the conversation and cannot focus solely on the task of driving.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--- Welcome Section -->
+    <!--- Three Column Section -->
+    <!--- Two Column Section -->
+    <!--- Fixed background -->
+    <!--- Emoji Section -->
+    <!--- Meet the team -->
+    <!--- Cards -->
+    <!--- Two Column Section -->
+    <!--- Connect -->
+    <!--- Footer -->
+    <footer>
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <hr class="light">
+                    <h5>Traffic Collisions Infographics</h5>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    <p>
-        Following learning objectives are fulfilled -
-        <ul>
-            <li>Connection to REST API using API key.</li>
-            <li>Consuming the data from the REST API.</li>
-        </ul>
-    </p>
-</div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+﻿@model NationalParks.Models.AddNewPark
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container-fluid">
+        <div class="card text-center">
+            <div class="card-body">
+                <h4 class="card-title text-center">Please Update The Incident Details Below</h4>
+
+                <form method="post" asp-controller="Home" asp-action="Create">
+                    <div class="alert alert-success">
+                        <div class="form-group">
+                            <label asp-for="dr_no">DR_NO</label>
+                            <div>
+                                <textarea class="form-control" asp-for="dr_no" rows="1"></textarea>
+                                <span asp-validation-for="dr_no"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-success">
+                        <div class="form-group">
+                            <label asp-for="area_name">Area Name</label>
+                            <div>
+                                <textarea class="form-control" asp-for="area_name" rows="1"></textarea>
+                                <span asp-validation-for="area_name"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-success">
+                        <div class="form-group">
+                            <label asp-for="vict_age">Age</label>
+                            <div>
+                                <textarea class="form-control" asp-for="vict_age" rows="1"></textarea>
+                                <span asp-validation-for="vict_age"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-success">
+                        <div class="form-group">
+                            <label asp-for="vict_sex">Victim's Sex'</label>
+                            <div>
+                                <textarea class="form-control" asp-for="vict_sex" rows="1"></textarea>
+                                <span asp-validation-for="vict_sex"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-success">
+                        <div class="form-group">
+                            <label asp-for="crm_cd_desc">Incident Description</label>
+                            <div>
+                                <textarea class="form-control" asp-for="crm_cd_desc" rows="5"></textarea>
+                                <span asp-validation-for="crm_cd_desc"></span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-success">
+                        <div class="form-group">
+                            <label asp-for="date_occ">Date Occurred</label>
+                            <div>
+                                <textarea class="form-control" asp-for="date_occ" rows="1"></textarea>
+                                <span asp-validation-for="date_occ"></span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-success">
+                        <div class="form-group">
+                            <label asp-for="location">Location</label>
+                            <div>
+                                <textarea class="form-control" asp-for="location" rows="5"></textarea>
+                                <span asp-validation-for="location"></span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-success">
+                        <div class="form-group">
+                            <label asp-for="premis_desc">Premise Description</label>
+                            <div>
+                                <textarea class="form-control" asp-for="premis_desc" rows="5"></textarea>
+                                <span asp-validation-for="premis_desc"></span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col text-center">
+                        <button class="btn btn-success" type="submit" name="action"> Click to Create a New Incident </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+</div>

@@ -1,0 +1,38 @@
+﻿@model NationalParks.Models.Class1
+
+@{
+    ViewData["Title"] = "Details";
+}
+<h1>Please find more details here</h1>
+<hr/>
+<!--- Jumbotron -->
+<div class="container-fluid">
+    <div class="row jumbotron">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-12">
+            <p class="lead text-center">
+
+                @ViewBag.Total;
+
+
+                <label>Division of Records Number:</label> @ViewBag.Total.dr_no
+                <br />
+                <label>Area Name:</label> @ViewBag.Total.area_name
+                <br />
+                <label>Victim's' Sex:</label> @ViewBag.Total.vict_sex
+                <br />
+                <label>Victim's' Age:</label> @ViewBag.Total.vict_age
+                <br />
+                <label>Date:</label> @ViewBag.Total.date_occ
+                <br />
+                <label>Crime Description:</label> @ViewBag.Total.crm_cd_desc
+                <br />
+                <label>Location:</label> @ViewBag.Total.location
+                <br />
+                <label>Premise Description</label> @ViewBag.Total.premis_desc
+                
+
+
+</div>
+    </div>
+</div>
+

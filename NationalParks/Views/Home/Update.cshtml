@@ -1,0 +1,71 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model NationalParks.Models.Update
+
+@{
+    ViewData["Title"] = "Update";
+}
+
+
+<form method="post" asp-controller="Home" asp-action="Update">
+    <div class="form-group">
+        <label asp-for="dr_no">DR_NO</label>
+        <div>
+            <textarea class="form-control" asp-for="dr_no" rows="1"></textarea>
+            <span asp-validation-for="dr_no"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="area_name">Area Name</label>
+        <div>
+            <textarea class="form-control" asp-for="area_name" rows="1"></textarea>
+            <span asp-validation-for="area_name"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="vict_age">Victim's Age'</label>
+        <div>
+            <textarea class="form-control" asp-for="vict_age" rows="1"></textarea>
+            <span asp-validation-for="vict_age"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="vict_sex">Victim's Sex</label>
+        <div>
+            <textarea class="form-control" asp-for="vict_sex" rows="1"></textarea>
+            <span asp-validation-for="vict_sex"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="date_occ">Date Occurred</label>
+        <div>
+            <textarea class="form-control" asp-for="date_occ" rows="1"></textarea>
+            <span asp-validation-for="date_occ"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="crm_cd_desc">Crime Description</label>
+        <div>
+            <textarea class="form-control" asp-for="crm_cd_desc" rows="1"></textarea>
+            <span asp-validation-for="crm_cd_desc"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="location">Location</label>
+        <div>
+            <textarea class="form-control" asp-for="location" rows="3"></textarea>
+            <span asp-validation-for="location"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="premis_desc">Premise Description</label>
+        <div>
+            <textarea class="form-control" asp-for="premis_desc" rows="3"></textarea>
+            <span asp-validation-for="premis_desc"></span>
+        </div>
+    </div>
+    <div class="col text-center">
+        <button class="btn btn-warning" type="submit" name="action"> Click to Submit Updates </button>
+    </div>
+</form>

@@ -1,28 +1,49 @@
-﻿@model NationalParks.Models.Parks
+﻿
+@model NationalParks.Models.Class1
 
-<h1>Parks</h1>
+
+
+
+
+<h1>Welcome to Traffic Collisions Information</h1>
+<p> Below are the list of accidents occured in the city of Los Angeles</p>
 <hr />
+<!--- Jumbotron -->
+<div class="container-fluid">
+    <div class="row jumbotron">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-12">
+            
+                @foreach (var i in ViewBag.Total)
+                {
+                    <label>Division of Records Number:</label> @i.dr_no
+                    <br />
+                    <label>Area Name:</label> @i.area_name
+                    <br />
+                    <label>Victim's' Sex:</label> @i.vict_sex
+                    <br />
+                    <label>Victim's' Age:</label> @i.vict_age
+                    <br />
+                    <label>Date:</label> @i.date_occ
+                    <br />
+                    <label>Crime Description:</label> @i.crm_cd_desc
+                    <br />
+                    
 
-@foreach (var item in Model.data)
-{
-<div>
-    <h3>
-        @Html.DisplayFor(modelItem => item.fullName)
-    </h3>
-    <div>
-        @Html.DisplayFor(modelItem => item.description)
-    </div>
-    <a href="@item.url" target="_blank">
-        @Html.DisplayFor(modelItem => item.url)
-    </a>
-    <div>
-        <h5>Directions: </h5>
-        @Html.DisplayFor(modelItem => item.directionsInfo)
-    </div>
-</div>
-<br/>
-}
+                    <a asp-area="" asp-controller="Home" asp-action="Delete" asp-route-id="@i.id">Delete</a>
 
-<script>
+                    <a asp-area="" asp-controller="Home" asp-action="Update" asp-route-id="@i.id">Update</a>
+                    
+                    <form method="get" asp-controller="Home" asp-action="Details">
+                        <button type="submit" asp-area="" asp-controller="Home" asp-action="Details" name="dr_no" value=@i.dr_no asp-route-id="@i.dr_no">Details</button>
+                    </form>
+                    <br />
+
+                    <br />
+                }
+                </div></div></div>
+
+
+                <script>
     alertDbSave(@ViewBag.dbSuccessComp);
-</script>
+                </script>
+
