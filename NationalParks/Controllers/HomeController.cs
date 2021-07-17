@@ -27,7 +27,7 @@ namespace NationalParks.Controllers
             return View();
         }
 
-        public IActionResult Parks(string dr_no, string vict_age, string vict_sex, string crm_cd_desc, string area_name)
+        public IActionResult Parks(string dr_no, string vict_age, string vict_sex, string crm_cd_desc)
         {
             // APIHandler webHandler = new APIHandler();
             // List<Class1> parks = webHandler.getParks();            
@@ -36,12 +36,12 @@ namespace NationalParks.Controllers
             vict_age = (vict_age == null) ? "" : vict_age;
             vict_sex = (vict_sex == null) ? "" : vict_sex;
             crm_cd_desc = (crm_cd_desc == null) ? "" : crm_cd_desc;
-            area_name = (area_name == null) ? "" : area_name;
+            
             
             
             List<Class1> plist = new List<Class1>();
             //ViewBag.Total = par;
-            if (dr_no == "" && vict_age == "" && vict_sex == "" && crm_cd_desc == "" && area_name == "")
+            if (dr_no == "" && vict_age == "" && vict_sex == "" && crm_cd_desc == "" )
             {
                 plist = dbContext.Classes.ToList();
             }
